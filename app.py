@@ -44,7 +44,7 @@ if total > 0:
     st.subheader(f"Total a pagar: ${total}")
 
     if st.button("Comfirmar pedido"):
-        if not nombre or ( modalidad == "Evio a domicilio" and not direccion):
+        if not nombre or ( modalidad == "Envio a domicilio" and not direccion):
             st.warning("Por favor completa tu nombre y direccion")
 
         else:
@@ -57,11 +57,11 @@ if total > 0:
                 texto += f"\n*Direccion:* {direccion}"        
 
 
-Telefono_rotiseria = "5493492215442"
-url_wa = f"https://wa.me/{Telefono_rotiseria}?text={urllib.parse.quote(texto)}"
+    Telefono_rotiseria = "5493492215442"
+    url_wa = f"https://wa.me/{Telefono_rotiseria}?text={urllib.parse.quote(texto)}"
 
-st.success("Pedido listo. has clic abajo para enviarlo:")
-st.markdown(f"[Enviar pedido por whatsApp]({url_wa})", unsafe_allow_html = True)
+    st.success("Pedido listo. has clic abajo para enviarlo:")
+    st.markdown(f"[Enviar pedido por whatsApp]({url_wa})", unsafe_allow_html = True)
 
 
 
